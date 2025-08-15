@@ -43,7 +43,7 @@ const Registration = () => {
       [name]: value
     }));
     
-    // Clear error when user starts typing
+    
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -57,14 +57,14 @@ const Registration = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call
+     
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      // For demo purposes, just show success and clear form
+      
       setSuccessMessage("Registration successful! Redirecting...");
       setForm(initialFormState);
       
-      // Redirect after delay
+    
       setTimeout(() => {
         navigate('/dashboard');
       }, 2000);
